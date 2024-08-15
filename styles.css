@@ -7,14 +7,17 @@ body {
     margin: 0;
     background: linear-gradient(135deg, #74ebd5, #9face6);
     color: #fff;
+    padding: 20px; /* Some padding for mobile devices */
+    box-sizing: border-box; /* Ensures padding is included in width calculations */
 }
 
 .countdown-container {
     text-align: center;
+    max-width: 100%;
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 3rem; /* Fixed size for better readability on desktops */
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
@@ -22,26 +25,52 @@ h1 {
 #countdown {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 20px; /* Sufficient gap for desktop */
+    flex-wrap: wrap; /* Allows time boxes to wrap on small screens */
 }
 
 .time-box {
     background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    padding: 20px; /* More padding for desktop */
     border-radius: 10px;
-    width: 100px;
+    width: 120px; /* Increased width for desktop */
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    margin: 10px 0;
 }
 
 .time-box span {
     display: block;
-    font-size: 48px;
+    font-size: 3rem; /* Larger font size for desktop */
     font-weight: bold;
 }
 
 .time-box p {
     margin: 0;
-    font-size: 18px;
+    font-size: 1.2rem; /* Larger font size for desktop */
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 8vw; /* Scales down for small screens */
+    }
+    
+    #countdown {
+        gap: 10px; /* Reduced gap for mobile */
+    }
+
+    .time-box {
+        width: 70px; /* Smaller width for mobile */
+        padding: 10px; /* Less padding for mobile */
+    }
+
+    .time-box span {
+        font-size: 6vw; /* Scales down for mobile */
+    }
+
+    .time-box p {
+        font-size: 3vw; /* Scales down for mobile */
+    }
 }
