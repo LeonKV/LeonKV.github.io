@@ -1,15 +1,47 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    padding: 0;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    color: #fff;
+}
+
+.countdown-container {
     text-align: center;
 }
 
 h1 {
-    color: #333;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-p {
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.time-box {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.time-box span {
+    display: block;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.time-box p {
+    margin: 0;
     font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
